@@ -22,6 +22,7 @@ def create_gb(clicked, size=8, mines=10):
                 gb[i][j] += 1
     return gb
 
+
 def revealchain(rvl, gb):
     dirs = [(-1, -1), (-1, 0), (-1, 1),
             (0, -1), (0, 1),
@@ -36,7 +37,7 @@ def revealchain(rvl, gb):
                 j = coord[1] + adir[1]
                 if c < 4:
                     if 0 <= i < len(gb) and 0 <= j < len(gb) and gb[i][j] != '*':
-                            rvl.append((i, j))
+                        rvl.append((i, j))
                 else:
                     if 0 <= i < len(gb) and 0 <= j < len(gb) and gb[i][j] == 0:
                         rvl.append((i, j))
